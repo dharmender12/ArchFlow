@@ -4,7 +4,7 @@
 
 ### Understand your codebase at a glance.
 
-<img src="./assets/archflow-logo.svg" alt="ArchFlow logo" width="480" />
+<img src="./assets/archflow-logo.jpg" alt="ArchFlow logo" width="480" />
 
 Interactive architecture maps, dependency graphs, health insights, security checks,
 and blast-radius analysis for real-world codebases.

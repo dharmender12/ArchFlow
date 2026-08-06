@@ -1,0 +1,20 @@
+# Repository and development metadata
+.git/**
+.github/**
+.vscode/**
+.archlens/**
+.gitignore
+
+# Non-extension project packages and development material
+card/**
+docs/**
+scripts/**
+tests/**
+ARCHITECTURE.md
+CYCLES.md
+MODULES.md
+codeflow-social.png
+screenshot.png
+
+# The Marketplace package uses the JPG wordmark/icon; keep the mark used by the webview toolbar
+assets/archflow-logo.svg
