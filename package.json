@@ -3,10 +3,17 @@
   "displayName": "ArchFlow",
   "description": "Explore your codebase architecture inside VS Code.",
   "version": "0.1.0",
-  "private": true,
-  "publisher": "codeflow",
+  "publisher": "DharmenderThakur",
   "license": "MIT",
   "icon": "assets/archflow-marketplace.jpg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dharmender12/ArchFlow.git"
+  },
+  "homepage": "https://github.com/dharmender12/ArchFlow",
+  "bugs": {
+    "url": "https://github.com/dharmender12/ArchFlow/issues"
+  },
   "engines": {
     "vscode": ">=1.85.0"
   },
