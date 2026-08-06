@@ -2,7 +2,7 @@
   "name": "archflow-vscode",
   "displayName": "ArchFlow Architecture Explorer",
   "description": "Explore your codebase architecture inside VS Code.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "DharmenderThakur",
   "license": "MIT",
   "icon": "assets/archflow-marketplace.jpg",
