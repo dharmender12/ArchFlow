@@ -73,7 +73,7 @@ function createWebviewContent(projectRoot, webview) {
   const html = fs.readFileSync(indexPath, 'utf8');
   const nonce = `${Date.now()}${Math.random().toString(16).slice(2)}`;
   const content = rewriteLocalAssets(html, webview, projectRoot);
-  const markUri = assetUri(webview, projectRoot, 'assets/archflow-mark.svg');
+  const markUri = assetUri(webview, projectRoot, 'assets/archflow-marketplace.jpg');
   const csp = [
     "default-src 'none'",
     `img-src ${webview.cspSource} https: data:`,
