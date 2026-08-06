@@ -22,7 +22,9 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:archflow.openArchitectureMap"
+    "onCommand:archflow.openArchitectureMap",
+    "onCommand:archflow.refreshArchitectureMap",
+    "onCommand:archflow.analyzeWorkspace"
   ],
   "main": "./extension/extension.js",
   "contributes": {
