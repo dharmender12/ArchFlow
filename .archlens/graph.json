@@ -1,0 +1,833 @@
+{
+  "rootDir": "/home/dharmender/Downloads/my_codeflow",
+  "nodes": [
+    {
+      "id": "card/lib/analyzer.js",
+      "path": "card/lib/analyzer.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/lib/exclude.js",
+      "path": "card/lib/exclude.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/lib/collect.js",
+      "path": "card/lib/collect.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/lib/state.js",
+      "path": "card/lib/state.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/lib/analysis.js",
+      "path": "card/lib/analysis.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/analyze.js",
+      "path": "card/analyze.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/lib/inputs.js",
+      "path": "card/lib/inputs.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/render/theme.js",
+      "path": "card/render/theme.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/render/sparkline.js",
+      "path": "card/render/sparkline.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/render/styles.js",
+      "path": "card/render/styles.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/render/card.js",
+      "path": "card/render/card.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/render/receipt-md.js",
+      "path": "card/render/receipt-md.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/lib/git.js",
+      "path": "card/lib/git.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/lib/pr.js",
+      "path": "card/lib/pr.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/index.js",
+      "path": "card/index.js",
+      "language": "javascript"
+    },
+    {
+      "id": "card/render/receipt.js",
+      "path": "card/render/receipt.js",
+      "language": "javascript"
+    },
+    {
+      "id": "extension/extension.js",
+      "path": "extension/extension.js",
+      "language": "javascript"
+    },
+    {
+      "id": "tests/fixtures/golden-world/src/math.js",
+      "path": "tests/fixtures/golden-world/src/math.js",
+      "language": "javascript"
+    },
+    {
+      "id": "tests/fixtures/golden-world/src/app.js",
+      "path": "tests/fixtures/golden-world/src/app.js",
+      "language": "javascript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/app/api/invoices/route.ts",
+      "path": "tests/fixtures/security-precision-world/app/api/invoices/route.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/app/api/orders/route.ts",
+      "path": "tests/fixtures/security-precision-world/app/api/orders/route.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/app/api/users/route.ts",
+      "path": "tests/fixtures/security-precision-world/app/api/users/route.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/app/mixed-render.tsx",
+      "path": "tests/fixtures/security-precision-world/app/mixed-render.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/app/page.tsx",
+      "path": "tests/fixtures/security-precision-world/app/page.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/app/profile-card.tsx",
+      "path": "tests/fixtures/security-precision-world/app/profile-card.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/components/dashboard.tsx",
+      "path": "tests/fixtures/security-precision-world/components/dashboard.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/lib/auth.ts",
+      "path": "tests/fixtures/security-precision-world/lib/auth.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/lib/csp.ts",
+      "path": "tests/fixtures/security-precision-world/lib/csp.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/lib/db.ts",
+      "path": "tests/fixtures/security-precision-world/lib/db.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/lib/dynamic.ts",
+      "path": "tests/fixtures/security-precision-world/lib/dynamic.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/lib/runner.ts",
+      "path": "tests/fixtures/security-precision-world/lib/runner.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/lib/search.ts",
+      "path": "tests/fixtures/security-precision-world/lib/search.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/server/logger.ts",
+      "path": "tests/fixtures/security-precision-world/server/logger.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/test/client-ip.test.ts",
+      "path": "tests/fixtures/security-precision-world/test/client-ip.test.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/a-backend/apiClient.ts",
+      "path": "tests/fixtures/web-app-world/a-backend/apiClient.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
+      "path": "tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/a-backend/routes/api.ts",
+      "path": "tests/fixtures/web-app-world/a-backend/routes/api.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/a-backend/src/config/index.js",
+      "path": "tests/fixtures/web-app-world/a-backend/src/config/index.js",
+      "language": "javascript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/a-backend/src/middleware/index.js",
+      "path": "tests/fixtures/web-app-world/a-backend/src/middleware/index.js",
+      "language": "javascript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/a-backend/src/routes/index.js",
+      "path": "tests/fixtures/web-app-world/a-backend/src/routes/index.js",
+      "language": "javascript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/about/index.tsx",
+      "path": "tests/fixtures/web-app-world/about/index.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/middleware/auth.ts",
+      "path": "tests/fixtures/web-app-world/middleware/auth.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/src/app/global-error.tsx",
+      "path": "tests/fixtures/web-app-world/src/app/global-error.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/src/app/layout.tsx",
+      "path": "tests/fixtures/web-app-world/src/app/layout.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/src/components/LandingPage.tsx",
+      "path": "tests/fixtures/web-app-world/src/components/LandingPage.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/src/app/page.tsx",
+      "path": "tests/fixtures/web-app-world/src/app/page.tsx",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/src/hooks/index.ts",
+      "path": "tests/fixtures/web-app-world/src/hooks/index.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/src/platforms/youtube/schema/index.ts",
+      "path": "tests/fixtures/web-app-world/src/platforms/youtube/schema/index.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/fixtures/web-app-world/src/ui/components/index.ts",
+      "path": "tests/fixtures/web-app-world/src/ui/components/index.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "tests/html-inline-script-analysis.smoke.js",
+      "path": "tests/html-inline-script-analysis.smoke.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/3d-force-graph/3d-force-graph.min.js",
+      "path": "vendor/3d-force-graph/3d-force-graph.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/acorn/acorn.min.js",
+      "path": "vendor/acorn/acorn.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/babel/babel.min.js",
+      "path": "vendor/babel/babel.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/d3/d3.min.js",
+      "path": "vendor/d3/d3.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/d3-sankey/d3-sankey.min.js",
+      "path": "vendor/d3-sankey/d3-sankey.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/jspdf/jspdf.umd.min.js",
+      "path": "vendor/jspdf/jspdf.umd.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/jsrsasign/jsrsasign-all-min.js",
+      "path": "vendor/jsrsasign/jsrsasign-all-min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/jszip/jszip.min.js",
+      "path": "vendor/jszip/jszip.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/mermaid/mermaid.min.js",
+      "path": "vendor/mermaid/mermaid.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/react/react.production.min.js",
+      "path": "vendor/react/react.production.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/react-dom/react-dom.production.min.js",
+      "path": "vendor/react-dom/react-dom.production.min.js",
+      "language": "javascript"
+    },
+    {
+      "id": "vendor/tree-sitter/tree-sitter.js",
+      "path": "vendor/tree-sitter/tree-sitter.js",
+      "language": "javascript"
+    },
+    {
+      "id": "tests/fixtures/golden-world/src/main.py",
+      "path": "tests/fixtures/golden-world/src/main.py",
+      "language": "python"
+    },
+    {
+      "id": "tests/fixtures/golden-world/src/service.py",
+      "path": "tests/fixtures/golden-world/src/service.py",
+      "language": "python"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/.claude/hooks/pre-commit.py",
+      "path": "tests/fixtures/security-precision-world/.claude/hooks/pre-commit.py",
+      "language": "python"
+    },
+    {
+      "id": "tests/fixtures/security-precision-world/api/import.py",
+      "path": "tests/fixtures/security-precision-world/api/import.py",
+      "language": "python"
+    }
+  ],
+  "edges": [
+    {
+      "kind": "import",
+      "from": "card/lib/analyzer.js",
+      "to": "fs",
+      "specifier": "fs",
+      "resolvedPath": "fs",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/analyzer.js",
+      "to": "path",
+      "specifier": "path",
+      "resolvedPath": "path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/analyzer.js",
+      "to": "vm",
+      "specifier": "vm",
+      "resolvedPath": "vm",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/collect.js",
+      "to": "fs",
+      "specifier": "fs",
+      "resolvedPath": "fs",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/collect.js",
+      "to": "path",
+      "specifier": "path",
+      "resolvedPath": "path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/collect.js",
+      "to": "card/lib/exclude.js",
+      "specifier": "./exclude.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/exclude.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/state.js",
+      "to": "fs",
+      "specifier": "fs",
+      "resolvedPath": "fs",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/state.js",
+      "to": "path",
+      "specifier": "path",
+      "resolvedPath": "path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/analysis.js",
+      "to": "fs",
+      "specifier": "fs",
+      "resolvedPath": "fs",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/analysis.js",
+      "to": "path",
+      "specifier": "path",
+      "resolvedPath": "path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/analysis.js",
+      "to": "card/lib/analyzer.js",
+      "specifier": "./analyzer.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/analyzer.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/analysis.js",
+      "to": "card/lib/collect.js",
+      "specifier": "./collect.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/collect.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/analysis.js",
+      "to": "card/lib/exclude.js",
+      "specifier": "./exclude.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/exclude.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/analysis.js",
+      "to": "card/lib/state.js",
+      "specifier": "./state.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/state.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/analyze.js",
+      "to": "path",
+      "specifier": "path",
+      "resolvedPath": "path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/analyze.js",
+      "to": "card/lib/analysis.js",
+      "specifier": "./lib/analysis.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/analysis.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/render/styles.js",
+      "to": "card/render/theme.js",
+      "specifier": "./theme.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/theme.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/render/styles.js",
+      "to": "card/render/sparkline.js",
+      "specifier": "./sparkline.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/sparkline.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/render/card.js",
+      "to": "card/render/styles.js",
+      "specifier": "./styles.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/styles.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/git.js",
+      "to": "child_process",
+      "specifier": "child_process",
+      "resolvedPath": "child_process",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/lib/pr.js",
+      "to": "https",
+      "specifier": "https",
+      "resolvedPath": "https",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "fs",
+      "specifier": "fs",
+      "resolvedPath": "fs",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "path",
+      "specifier": "path",
+      "resolvedPath": "path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "card/lib/inputs.js",
+      "specifier": "./lib/inputs.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/inputs.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "card/lib/analysis.js",
+      "specifier": "./lib/analysis.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/analysis.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "card/lib/state.js",
+      "specifier": "./lib/state.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/state.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "card/render/card.js",
+      "specifier": "./render/card.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/card.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "card/render/receipt-md.js",
+      "specifier": "./render/receipt-md.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/receipt-md.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "card/lib/git.js",
+      "specifier": "./lib/git.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/git.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/index.js",
+      "to": "card/lib/pr.js",
+      "specifier": "./lib/pr.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/pr.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/render/receipt.js",
+      "to": "card/render/theme.js",
+      "specifier": "./theme.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/theme.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "card/render/receipt.js",
+      "to": "card/render/card.js",
+      "specifier": "./card.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/card.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "extension/extension.js",
+      "to": "node:fs",
+      "specifier": "node:fs",
+      "resolvedPath": "node:fs",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "extension/extension.js",
+      "to": "node:path",
+      "specifier": "node:path",
+      "resolvedPath": "node:path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "extension/extension.js",
+      "to": "vscode",
+      "specifier": "vscode",
+      "resolvedPath": "vscode",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/golden-world/src/app.js",
+      "to": "tests/fixtures/golden-world/src/math.js",
+      "specifier": "./math.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/tests/fixtures/golden-world/src/math.js",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/security-precision-world/app/api/invoices/route.ts",
+      "to": "next/server",
+      "specifier": "next/server",
+      "resolvedPath": "next/server",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/security-precision-world/app/api/orders/route.ts",
+      "to": "next/server",
+      "specifier": "next/server",
+      "resolvedPath": "next/server",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/security-precision-world/app/api/users/route.ts",
+      "to": "next/server",
+      "specifier": "next/server",
+      "resolvedPath": "next/server",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/security-precision-world/lib/runner.ts",
+      "to": "child_process",
+      "specifier": "child_process",
+      "resolvedPath": "child_process",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/security-precision-world/server/logger.ts",
+      "to": "node:child_process",
+      "specifier": "node:child_process",
+      "resolvedPath": "node:child_process",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
+      "to": "tests/fixtures/web-app-world/a-backend/apiClient.ts",
+      "specifier": "../apiClient",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/tests/fixtures/web-app-world/a-backend/apiClient.ts",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/web-app-world/a-backend/routes/api.ts",
+      "to": "tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
+      "specifier": "../youtube/analyzer",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/web-app-world/src/app/page.tsx",
+      "to": "tests/fixtures/web-app-world/src/components/LandingPage.tsx",
+      "specifier": "../components/LandingPage",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/tests/fixtures/web-app-world/src/components/LandingPage.tsx",
+      "unresolved": false
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/web-app-world/src/hooks/index.ts",
+      "to": "./useAuth",
+      "specifier": "./useAuth",
+      "resolvedPath": "./useAuth",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/web-app-world/src/ui/components/index.ts",
+      "to": "./Button",
+      "specifier": "./Button",
+      "resolvedPath": "./Button",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/html-inline-script-analysis.smoke.js",
+      "to": "node:assert/strict",
+      "specifier": "node:assert/strict",
+      "resolvedPath": "node:assert/strict",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/html-inline-script-analysis.smoke.js",
+      "to": "node:fs",
+      "specifier": "node:fs",
+      "resolvedPath": "node:fs",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/html-inline-script-analysis.smoke.js",
+      "to": "node:path",
+      "specifier": "node:path",
+      "resolvedPath": "node:path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/html-inline-script-analysis.smoke.js",
+      "to": "node:vm",
+      "specifier": "node:vm",
+      "resolvedPath": "node:vm",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/d3-sankey/d3-sankey.min.js",
+      "to": "d3-array",
+      "specifier": "d3-array",
+      "resolvedPath": "d3-array",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/d3-sankey/d3-sankey.min.js",
+      "to": "d3-shape",
+      "specifier": "d3-shape",
+      "resolvedPath": "d3-shape",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/jspdf/jspdf.umd.min.js",
+      "to": "worker_threads",
+      "specifier": "worker_threads",
+      "resolvedPath": "worker_threads",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/jspdf/jspdf.umd.min.js",
+      "to": "html2canvas",
+      "specifier": "html2canvas",
+      "resolvedPath": "html2canvas",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/jspdf/jspdf.umd.min.js",
+      "to": "dompurify",
+      "specifier": "dompurify",
+      "resolvedPath": "dompurify",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/jspdf/jspdf.umd.min.js",
+      "to": "canvg",
+      "specifier": "canvg",
+      "resolvedPath": "canvg",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/react-dom/react-dom.production.min.js",
+      "to": "react",
+      "specifier": "react",
+      "resolvedPath": "react",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/tree-sitter/tree-sitter.js",
+      "to": "fs",
+      "specifier": "fs",
+      "resolvedPath": "fs",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "vendor/tree-sitter/tree-sitter.js",
+      "to": "path",
+      "specifier": "path",
+      "resolvedPath": "path",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/golden-world/src/main.py",
+      "to": "service.hydrate",
+      "specifier": "service.hydrate",
+      "resolvedPath": "service.hydrate",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/security-precision-world/.claude/hooks/pre-commit.py",
+      "to": "subprocess",
+      "specifier": "subprocess",
+      "resolvedPath": "subprocess",
+      "unresolved": true
+    },
+    {
+      "kind": "import",
+      "from": "tests/fixtures/security-precision-world/api/import.py",
+      "to": "subprocess",
+      "specifier": "subprocess",
+      "resolvedPath": "subprocess",
+      "unresolved": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "archflow-vscode",
+  "displayName": "ArchFlow",
+  "description": "Explore your codebase architecture inside VS Code.",
+  "version": "0.1.0",
+  "private": true,
+  "publisher": "codeflow",
+  "license": "MIT",
+  "icon": "assets/archflow-marketplace.jpg",
+  "engines": {
+    "vscode": ">=1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:archflow.openArchitectureMap"
+  ],
+  "main": "./extension/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "archflow.openArchitectureMap",
+        "title": "ArchFlow: Open Architecture Map"
+      },
+      {
+        "command": "archflow.refreshArchitectureMap",
+        "title": "ArchFlow: Refresh Architecture Map"
+      },
+      {
+        "command": "archflow.analyzeWorkspace",
+        "title": "ArchFlow: Analyze Current Workspace"
+      }
+    ]
+  }
+}
