@@ -1,6 +1,6 @@
 {
   "name": "archflow-vscode",
-  "displayName": "ArchFlow",
+  "displayName": "ArchFlow Architecture Explorer",
   "description": "Explore your codebase architecture inside VS Code.",
   "version": "0.1.0",
   "publisher": "DharmenderThakur",

@@ -9,7 +9,7 @@ const host = await readFile(join(root, 'extension/extension.js'), 'utf8');
 
 assert.equal(manifest.main, './extension/extension.js');
 assert.equal(manifest.name, 'archflow-vscode');
-assert.equal(manifest.displayName, 'ArchFlow');
+assert.equal(manifest.displayName, 'ArchFlow Architecture Explorer');
 assert.ok(manifest.contributes.commands.some((command) => command.command === 'archflow.openArchitectureMap'));
 assert.ok(manifest.contributes.commands.some((command) => command.command === 'archflow.refreshArchitectureMap'));
 assert.ok(manifest.contributes.commands.some((command) => command.command === 'archflow.analyzeWorkspace'));
