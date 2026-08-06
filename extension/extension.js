@@ -91,13 +91,36 @@ function createWebviewContent(projectRoot, webview) {
       <img src="${markUri}" alt="ArchFlow" width="20" height="20" style="border-radius:5px;display:block">
       <span style="opacity:.7;padding:5px 4px">ArchFlow</span>
       <button data-archflow-action="workspace" style="cursor:pointer;padding:5px 9px">Analyze Workspace</button>
-      <button data-archflow-action="refresh" style="cursor:pointer;padding:5px 9px">Refresh</button>
       <span id="archflow-extension-status" style="opacity:.7;padding:5px 4px"></span>
     </div>
     <script>
       (function(){
         var api=typeof acquireVsCodeApi==='function'?acquireVsCodeApi():null;
         var status=document.getElementById('archflow-extension-status');
+        var style=document.createElement('style');
+        style.textContent='\
+          .repo-input-group,.mobile-source-controls,\
+          button[aria-label="Open local folder"],button[title="Open local folder"],\
+          button[aria-label="Open ZIP archive"],button[title="Open ZIP archive"],\
+          button[aria-label="Edit exclude patterns"],button[title^="Edit exclude patterns"],\
+          .refresh-btn,.reset-btn,input[type="file"]{display:none!important}\
+        ';
+        document.head.appendChild(style);
+        function rewriteVisibleText(){
+          var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+          var node;
+          while(node=walker.nextNode()){
+            var parent=node.parentElement;
+            if(!parent||parent.closest('script,style,textarea'))continue;
+            var value=node.nodeValue;
+            var updated=value.replace(/CODEFLOW/g,'ARCHFLOW').replace(/CodeFlow/g,'ArchFlow')
+              .replace('Enter a GitHub URL, open a folder, or load a ZIP archive','Use Analyze Workspace to inspect the open VS Code folder')
+              .replace('Analyze a repo or open a folder','Analyze the current VS Code workspace');
+            if(updated!==value)node.nodeValue=updated;
+          }
+        }
+        rewriteVisibleText();
+        if(window.MutationObserver)new MutationObserver(rewriteVisibleText).observe(document.body,{childList:true,subtree:true});
         window.addEventListener('message',function(event){
           var message=event.data||{};
           if(message.type==='archflow-status'&&status)status.textContent=message.text||'';
