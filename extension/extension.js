@@ -114,6 +114,16 @@ function createWebviewContent(projectRoot, webview) {
             input.dispatchEvent(new Event('change',{bubbles:true}));
           }
         });
+        // showDirectoryPicker is blocked inside VS Code webviews. Redirect the
+        // existing app's Open Folder controls to the native workspace bridge.
+        document.addEventListener('click',function(event){
+          var target=event.target&&event.target.closest?event.target.closest('button[aria-label="Open local folder"],button[title="Open local folder"]'):null;
+          if(target){
+            event.preventDefault();
+            event.stopPropagation();
+            if(api)api.postMessage({type:'archflow-action',action:'workspace'});
+          }
+        },true);
         document.querySelectorAll('[data-archflow-action]').forEach(function(button){
           button.addEventListener('click',function(){
             if(api)api.postMessage({type:'archflow-action',action:button.getAttribute('data-archflow-action')});
