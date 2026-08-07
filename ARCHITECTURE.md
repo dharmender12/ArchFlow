@@ -1,11 +1,11 @@
 # ArchLens Architecture
 
-- Modules: 65
-- Dependencies: 61
+- Modules: 67
+- Dependencies: 62
 - Languages:
 - javascript: 35
 - typescript: 27
-- python: 3
+- python: 5
 
 ## Most Depended-On Modules
 - path (7 dependents)

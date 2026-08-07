@@ -16,6 +16,3 @@ CYCLES.md
 MODULES.md
 codeflow-social.png
 screenshot.png
-
-# The Marketplace package uses JPG branding; SVG sources remain available in GitHub
-assets/*.svg

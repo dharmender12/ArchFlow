@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+  <defs>
+    <linearGradient id="archflowActivityGradient" x1="4" y1="20" x2="20" y2="4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+  <path d="M5 20 12 4l7 16M8 14h8M12 4v4" fill="none" stroke="url(#archflowActivityGradient)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="12" cy="4" r="1.6" fill="#A78BFA"/>
+  <circle cx="5" cy="20" r="1.4" fill="#22D3EE"/>
+  <circle cx="19" cy="20" r="1.4" fill="#22D3EE"/>
+</svg>

@@ -2,10 +2,10 @@
   "name": "archflow-vscode",
   "displayName": "ArchFlow Architecture Explorer",
   "description": "Explore your codebase architecture inside VS Code.",
-  "version": "0.5.0",
+  "version": "0.6.1",
   "publisher": "DharmenderThakur",
   "license": "MIT",
-  "icon": "assets/archflow-marketplace.jpg",
+  "icon": "assets/archflow-marketplace.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/dharmender12/ArchFlow.git"
@@ -33,7 +33,7 @@
         {
           "id": "archflow",
           "title": "ArchFlow",
-          "icon": "assets/archflow-marketplace.jpg"
+          "icon": "assets/archflow-activity.svg"
         }
       ]
     },
@@ -42,7 +42,8 @@
         {
           "type": "webview",
           "id": "archflow.dashboard",
-          "name": "ArchFlow"
+          "name": "ArchFlow",
+          "icon": "assets/archflow-activity.svg"
         }
       ]
     },
@@ -58,6 +59,10 @@
       {
         "command": "archflow.analyzeWorkspace",
         "title": "ArchFlow: Analyze Current Workspace"
+      },
+      {
+        "command": "archflow.compareBranch",
+        "title": "ArchFlow: Compare Current Branch"
       }
     ]
   }

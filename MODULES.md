@@ -181,6 +181,14 @@
   - node:path
   - vscode
 
+## student.py
+- Language: python
+- Depends on:
+  - none
+- Depended on by:
+  - none
+- Unresolved imports: none
+
 ## tests/fixtures/golden-world/src/app.js
 - Language: javascript
 - Depends on:

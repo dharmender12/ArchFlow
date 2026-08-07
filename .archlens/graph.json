@@ -312,6 +312,11 @@
       "language": "javascript"
     },
     {
+      "id": "student.py",
+      "path": "student.py",
+      "language": "python"
+    },
+    {
       "id": "tests/fixtures/golden-world/src/main.py",
       "path": "tests/fixtures/golden-world/src/main.py",
       "language": "python"
