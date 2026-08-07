@@ -1,5 +1,5 @@
 {
-  "rootDir": "/home/dharmender/Downloads/my_codeflow",
+  "rootDir": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix",
   "nodes": [
     {
       "id": "card/lib/analyzer.js",
@@ -322,11 +322,6 @@
       "language": "python"
     },
     {
-      "id": "tests/fixtures/security-precision-world/.claude/hooks/pre-commit.py",
-      "path": "tests/fixtures/security-precision-world/.claude/hooks/pre-commit.py",
-      "language": "python"
-    },
-    {
       "id": "tests/fixtures/security-precision-world/api/import.py",
       "path": "tests/fixtures/security-precision-world/api/import.py",
       "language": "python"
@@ -378,7 +373,7 @@
       "from": "card/lib/collect.js",
       "to": "card/lib/exclude.js",
       "specifier": "./exclude.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/exclude.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/exclude.js",
       "unresolved": false
     },
     {
@@ -418,7 +413,7 @@
       "from": "card/lib/analysis.js",
       "to": "card/lib/analyzer.js",
       "specifier": "./analyzer.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/analyzer.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/analyzer.js",
       "unresolved": false
     },
     {
@@ -426,7 +421,7 @@
       "from": "card/lib/analysis.js",
       "to": "card/lib/collect.js",
       "specifier": "./collect.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/collect.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/collect.js",
       "unresolved": false
     },
     {
@@ -434,7 +429,7 @@
       "from": "card/lib/analysis.js",
       "to": "card/lib/exclude.js",
       "specifier": "./exclude.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/exclude.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/exclude.js",
       "unresolved": false
     },
     {
@@ -442,7 +437,7 @@
       "from": "card/lib/analysis.js",
       "to": "card/lib/state.js",
       "specifier": "./state.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/state.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/state.js",
       "unresolved": false
     },
     {
@@ -458,7 +453,7 @@
       "from": "card/analyze.js",
       "to": "card/lib/analysis.js",
       "specifier": "./lib/analysis.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/analysis.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/analysis.js",
       "unresolved": false
     },
     {
@@ -466,7 +461,7 @@
       "from": "card/render/styles.js",
       "to": "card/render/theme.js",
       "specifier": "./theme.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/theme.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/render/theme.js",
       "unresolved": false
     },
     {
@@ -474,7 +469,7 @@
       "from": "card/render/styles.js",
       "to": "card/render/sparkline.js",
       "specifier": "./sparkline.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/sparkline.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/render/sparkline.js",
       "unresolved": false
     },
     {
@@ -482,7 +477,7 @@
       "from": "card/render/card.js",
       "to": "card/render/styles.js",
       "specifier": "./styles.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/styles.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/render/styles.js",
       "unresolved": false
     },
     {
@@ -522,7 +517,7 @@
       "from": "card/index.js",
       "to": "card/lib/inputs.js",
       "specifier": "./lib/inputs.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/inputs.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/inputs.js",
       "unresolved": false
     },
     {
@@ -530,7 +525,7 @@
       "from": "card/index.js",
       "to": "card/lib/analysis.js",
       "specifier": "./lib/analysis.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/analysis.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/analysis.js",
       "unresolved": false
     },
     {
@@ -538,7 +533,7 @@
       "from": "card/index.js",
       "to": "card/lib/state.js",
       "specifier": "./lib/state.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/state.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/state.js",
       "unresolved": false
     },
     {
@@ -546,7 +541,7 @@
       "from": "card/index.js",
       "to": "card/render/card.js",
       "specifier": "./render/card.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/card.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/render/card.js",
       "unresolved": false
     },
     {
@@ -554,7 +549,7 @@
       "from": "card/index.js",
       "to": "card/render/receipt-md.js",
       "specifier": "./render/receipt-md.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/receipt-md.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/render/receipt-md.js",
       "unresolved": false
     },
     {
@@ -562,7 +557,7 @@
       "from": "card/index.js",
       "to": "card/lib/git.js",
       "specifier": "./lib/git.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/git.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/git.js",
       "unresolved": false
     },
     {
@@ -570,7 +565,7 @@
       "from": "card/index.js",
       "to": "card/lib/pr.js",
       "specifier": "./lib/pr.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/lib/pr.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/lib/pr.js",
       "unresolved": false
     },
     {
@@ -578,7 +573,7 @@
       "from": "card/render/receipt.js",
       "to": "card/render/theme.js",
       "specifier": "./theme.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/theme.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/render/theme.js",
       "unresolved": false
     },
     {
@@ -586,7 +581,7 @@
       "from": "card/render/receipt.js",
       "to": "card/render/card.js",
       "specifier": "./card.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/card/render/card.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/card/render/card.js",
       "unresolved": false
     },
     {
@@ -618,7 +613,7 @@
       "from": "tests/fixtures/golden-world/src/app.js",
       "to": "tests/fixtures/golden-world/src/math.js",
       "specifier": "./math.js",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/tests/fixtures/golden-world/src/math.js",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/tests/fixtures/golden-world/src/math.js",
       "unresolved": false
     },
     {
@@ -666,7 +661,7 @@
       "from": "tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
       "to": "tests/fixtures/web-app-world/a-backend/apiClient.ts",
       "specifier": "../apiClient",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/tests/fixtures/web-app-world/a-backend/apiClient.ts",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/tests/fixtures/web-app-world/a-backend/apiClient.ts",
       "unresolved": false
     },
     {
@@ -674,7 +669,7 @@
       "from": "tests/fixtures/web-app-world/a-backend/routes/api.ts",
       "to": "tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
       "specifier": "../youtube/analyzer",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/tests/fixtures/web-app-world/a-backend/youtube/analyzer.ts",
       "unresolved": false
     },
     {
@@ -682,7 +677,7 @@
       "from": "tests/fixtures/web-app-world/src/app/page.tsx",
       "to": "tests/fixtures/web-app-world/src/components/LandingPage.tsx",
       "specifier": "../components/LandingPage",
-      "resolvedPath": "/home/dharmender/Downloads/my_codeflow/tests/fixtures/web-app-world/src/components/LandingPage.tsx",
+      "resolvedPath": "/home/dharmender/Downloads/my_codeflow.worktrees/security-vulnerabilities-fix/tests/fixtures/web-app-world/src/components/LandingPage.tsx",
       "unresolved": false
     },
     {
@@ -811,14 +806,6 @@
       "to": "service.hydrate",
       "specifier": "service.hydrate",
       "resolvedPath": "service.hydrate",
-      "unresolved": true
-    },
-    {
-      "kind": "import",
-      "from": "tests/fixtures/security-precision-world/.claude/hooks/pre-commit.py",
-      "to": "subprocess",
-      "specifier": "subprocess",
-      "resolvedPath": "subprocess",
       "unresolved": true
     },
     {

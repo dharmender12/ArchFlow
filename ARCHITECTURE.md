@@ -1,11 +1,11 @@
 # ArchLens Architecture
 
-- Modules: 66
-- Dependencies: 62
+- Modules: 65
+- Dependencies: 61
 - Languages:
 - javascript: 35
 - typescript: 27
-- python: 4
+- python: 3
 
 ## Most Depended-On Modules
 - path (7 dependents)
@@ -58,5 +58,4 @@
 - vendor/tree-sitter/tree-sitter.js -> fs (unresolved)
 - vendor/tree-sitter/tree-sitter.js -> path (unresolved)
 - tests/fixtures/golden-world/src/main.py -> service.hydrate (unresolved)
-- tests/fixtures/security-precision-world/.claude/hooks/pre-commit.py -> subprocess (unresolved)
 - tests/fixtures/security-precision-world/api/import.py -> subprocess (unresolved)
