@@ -4,6 +4,7 @@
 .vscode/**
 .archlens/**
 .gitignore
+student.py
 
 # Non-extension project packages and development material
 card/**
