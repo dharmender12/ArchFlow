@@ -214,15 +214,6 @@
   - none
 - Unresolved imports: none
 
-## tests/fixtures/security-precision-world/.claude/hooks/pre-commit.py
-- Language: python
-- Depends on:
-  - subprocess
-- Depended on by:
-  - none
-- Unresolved imports:
-  - subprocess
-
 ## tests/fixtures/security-precision-world/api/import.py
 - Language: python
 - Depends on:

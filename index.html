@@ -1574,10 +1574,23 @@ const Parser={
     },
     detectSecurity:function(files){
         var issues=[];
+        function stripSecurityCommentsAndStrings(content){
+            if(!content)return'';
+            function preserveLines(match){
+                return match.replace(/[^\n]/g,' ');
+            }
+            return content
+                .replace(/\/\*[\s\S]*?\*\//g,preserveLines)
+                .replace(/\/\/[^\n]*/g,preserveLines)
+                .replace(/#(?!\!)[^\n]*/g,preserveLines)
+                .replace(/(["'`])(?:\\.|(?!\1)[\s\S])*?\1/g,preserveLines);
+        }
         files.forEach(function(f){
             var scanContent=getSecurityScanContent(f);
             if(!scanContent)return;
             var lines=scanContent.split('\n');
+            var executableScanContent=stripSecurityCommentsAndStrings(scanContent);
+            var executableLines=executableScanContent.split('\n');
             lines.forEach(function(line,idx){
                 if(!isSecretScanExemptPath(f.path)&&line.match(/(?:password|passwd|pwd|secret|api_key|apikey|token|auth)\s*[=:]\s*['"][^'"]{4,}['"]/i)&&!line.includes('process.env')&&!line.includes('config.')){
                     issues.push({severity:'high',title:'Hardcoded Secret',file:f.name,path:f.path,line:idx+1,desc:'Credentials should never be hardcoded. Use environment variables or a secrets manager.',code:line.trim().substring(0,80)});
@@ -1590,7 +1603,7 @@ const Parser={
             while((dbCall=dbCallRegex.exec(scanContent))!==null){
                 if(/\$\{/.test(dbCall[1])&&/(?:SELECT|INSERT|UPDATE|DELETE)/i.test(dbCall[1])){hasSqlTemplateInjection=true;break;}
             }
-            if(f.isCode&&(hasSqlConcat||hasSqlTemplateInjection)){
+            if(!isNonProductionPath(f.path)&&f.isCode&&(hasSqlConcat||hasSqlTemplateInjection)){
                 var m=scanContent.match(/.*(query|execute|SELECT|INSERT|UPDATE|DELETE).*(\+|\$\{).*/i);
                 issues.push({severity:'high',title:'SQL Injection Risk',file:f.name,path:f.path,desc:'String concatenation in SQL queries. Use parameterized queries instead.',code:m?m[0].trim().substring(0,80):''});
             }
@@ -1611,14 +1624,16 @@ const Parser={
             if(!isNonProductionPath(f.path)&&(hasInnerHtmlAssignment||hasDangerousHtmlRender)&&!isSafePreviewRender&&!isSafeStaticHtml){
                 issues.push({severity:'high',title:'XSS Vulnerability',file:f.name,path:f.path,desc:'Direct HTML injection can lead to XSS attacks. Sanitize user input.',code:''});
             }
-            if(scanContent.includes('eval(')){
-                var evalLine=lines.findIndex(function(l){return l.includes('eval(');});
+            if(f.isCode&&executableScanContent.match(/\beval\s*\(/)){
+                var evalLine=executableLines.findIndex(function(l){return l.match(/\beval\s*\(/);});
                 issues.push({severity:'medium',title:'Dynamic Code Execution',file:f.name,path:f.path,line:evalLine+1,desc:'eval() executes arbitrary code. Avoid if possible or validate input strictly.',code:evalLine>=0?lines[evalLine].trim().substring(0,80):''});
             }
-            if(scanContent.match(/\b(?:new\s+)?Function\s*\(/)){
+            if(f.isCode&&executableScanContent.match(/\b(?:new\s+)?Function\s*\(/)){
                 issues.push({severity:'medium',title:'Function Constructor',file:f.name,path:f.path,desc:'Function constructor is similar to eval(). Consider alternatives.',code:''});
             }
-            var execMatch=scanContent.match(/(?:child_process|cp)\.\w*[Ee]xec\w*\s*\(/)||scanContent.match(/require\(\s*['"](?:node:)?child_process['"]\s*\)/)||scanContent.match(/from\s+['"](?:node:)?child_process['"]/);
+            var execMatch=executableScanContent.match(/(?:child_process|cp)\.\w*[Ee]xec\w*\s*\(/)||
+                scanContent.match(/require\(\s*['"](?:node:)?child_process['"]\s*\)/)||
+                scanContent.match(/from\s+['"](?:node:)?child_process['"]/);
             if(!isNonProductionPath(f.path)&&execMatch){
                 issues.push({severity:'medium',title:'Command Execution',file:f.name,path:f.path,desc:'Shell command execution detected. Ensure input is sanitized to prevent injection.',code:''});
             }
@@ -1633,7 +1648,7 @@ const Parser={
             if(scanContent.match(/SendKeys\s*\(/i)){
                 issues.push({severity:'high',title:'SendKeys Usage',file:f.name,path:f.path,desc:'SendKeys can be exploited for code injection. Avoid using SendKeys.',code:''});
             }
-            if(!isNonProductionPath(f.path)&&scanContent.match(/Shell\s*\(/i)){
+            if(!isNonProductionPath(f.path)&&executableScanContent.match(/Shell\s*\(/i)){
                 issues.push({severity:'high',title:'Shell Command Execution',file:f.name,path:f.path,desc:'Shell() executes system commands. Ensure input is validated.',code:''});
             }
             if(scanContent.match(/CreateObject\s*\(\s*["']WScript\.Shell["']/i)){

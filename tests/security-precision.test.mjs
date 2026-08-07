@@ -274,6 +274,19 @@ test('Function Constructor rule flags bare Function() and new Function(), not id
   assert.equal(flaggedPaths.includes('lib/reflection.ts'), false);
 });
 
+test('Dynamic Code Execution rule ignores string-literal mentions and flags real eval() calls', async () => {
+  const data = await analyzeSyntheticFiles([
+    { path: 'lib/scanner.ts', content: "if(scanContent.includes('eval(')){ return true; }\n" },
+    { path: 'lib/runtime.ts', content: 'const x = eval(userInput);\n' },
+  ]);
+  const flaggedPaths = data.securityIssues
+    .filter((i) => i.title === 'Dynamic Code Execution')
+    .map((i) => i.path);
+
+  assert.equal(flaggedPaths.includes('lib/scanner.ts'), false);
+  assert.equal(flaggedPaths.includes('lib/runtime.ts'), true);
+});
+
 test('Debug Statements rule downgrades server-only code, keeps client code at low', async () => {
   const data = await analyzeFixture('security-precision-world');
   const serverIssue = data.securityIssues.find((i) => i.title === 'Debug Statements' && i.path === 'server/logger.ts');
