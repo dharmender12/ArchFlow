@@ -73,7 +73,7 @@ function createWebviewContent(projectRoot, webview) {
   const html = fs.readFileSync(indexPath, 'utf8');
   const nonce = `${Date.now()}${Math.random().toString(16).slice(2)}`;
   const content = rewriteLocalAssets(html, webview, projectRoot);
-  const markUri = assetUri(webview, projectRoot, 'assets/archflow-marketplace.jpg');
+  const logoUri = assetUri(webview, projectRoot, 'assets/archflow-logo.jpg');
   const csp = [
     "default-src 'none'",
     `img-src ${webview.cspSource} https: data:`,
@@ -87,23 +87,31 @@ function createWebviewContent(projectRoot, webview) {
   ].join('; ');
 
   const toolbar = `
+    <img src="${logoUri}" alt="ArchFlow" width="156" height="39" style="position:fixed;left:14px;top:6px;z-index:10000;object-fit:contain;border-radius:6px;background:#F8FAFC">
     <div id="archflow-extension-toolbar" style="position:fixed;top:8px;right:12px;z-index:9999;display:flex;gap:6px;align-items:center;font:11px sans-serif">
-      <img src="${markUri}" alt="ArchFlow" width="20" height="20" style="border-radius:5px;display:block">
-      <span style="opacity:.7;padding:5px 4px">ArchFlow</span>
       <button data-archflow-action="workspace" style="cursor:pointer;padding:5px 9px">Analyze Workspace</button>
+      <button data-archflow-action="health" style="cursor:pointer;padding:5px 9px">Health</button>
+      <button data-archflow-action="issues" style="cursor:pointer;padding:5px 9px">Issues</button>
       <span id="archflow-extension-status" style="opacity:.7;padding:5px 4px"></span>
     </div>
     <script>
       (function(){
         var api=typeof acquireVsCodeApi==='function'?acquireVsCodeApi():null;
         var status=document.getElementById('archflow-extension-status');
+        document.documentElement.classList.add('archflow-vscode');
         var style=document.createElement('style');
         style.textContent='\
-          .repo-input-group,.mobile-source-controls,\
+          .repo-input-group,.mobile-source-controls,.topbar>.logo,.mobile-brand-row .logo,\
           button[aria-label="Open local folder"],button[title="Open local folder"],\
           button[aria-label="Open ZIP archive"],button[title="Open ZIP archive"],\
           button[aria-label="Edit exclude patterns"],button[title^="Edit exclude patterns"],\
           .refresh-btn,.reset-btn,input[type="file"]{display:none!important}\
+          .archflow-vscode .sidebar,.archflow-vscode .right-panel{display:none!important}\
+          .archflow-vscode .canvas-area{width:100%!important}\
+          .archflow-vscode.archflow-health-open .sidebar{display:flex!important;position:fixed!important;left:12px;top:60px;bottom:12px;width:280px!important;min-width:280px!important;z-index:9998;box-shadow:0 18px 40px rgba(0,0,0,.45)}\
+          .archflow-vscode.archflow-health-open .sidebar .sidebar-scroll{display:none!important}\
+          .archflow-vscode.archflow-insights-open .right-panel{display:flex!important;position:fixed!important;right:12px;top:60px;bottom:12px;width:380px!important;z-index:9998;box-shadow:0 18px 40px rgba(0,0,0,.45)}\
+          @media(max-width:800px){.archflow-vscode.archflow-health-open .sidebar,.archflow-vscode.archflow-insights-open .right-panel{left:12px;right:12px;width:auto!important;min-width:0!important}}\
         ';
         document.head.appendChild(style);
         function rewriteVisibleText(){
@@ -149,7 +157,25 @@ function createWebviewContent(projectRoot, webview) {
         },true);
         document.querySelectorAll('[data-archflow-action]').forEach(function(button){
           button.addEventListener('click',function(){
-            if(api)api.postMessage({type:'archflow-action',action:button.getAttribute('data-archflow-action')});
+            var action=button.getAttribute('data-archflow-action');
+            if(action==='health'){
+              var opening=!document.documentElement.classList.contains('archflow-health-open');
+              document.documentElement.classList.toggle('archflow-health-open');
+              document.documentElement.classList.remove('archflow-insights-open');
+              document.querySelectorAll('.sidebar .sidebar-section').forEach(function(section,index){
+                section.style.display=opening?(index===0?'block':'none'):'';
+              });
+              return;
+            }
+            if(action==='issues'){
+              document.documentElement.classList.toggle('archflow-insights-open');
+              document.documentElement.classList.remove('archflow-health-open');
+              if(document.documentElement.classList.contains('archflow-insights-open')){
+                setTimeout(function(){var tab=document.querySelector('.right-panel .panel-tab');if(tab)tab.click();},0);
+              }
+              return;
+            }
+            if(api)api.postMessage({type:'archflow-action',action:action});
           });
         });
         if(api)api.postMessage({type:'archflow-ready'});
