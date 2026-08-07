@@ -267,6 +267,9 @@ function activate(context) {
   let currentPanel;
   const workspaceFolder = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
   context.subscriptions.push(
+    vscode.window.registerWebviewViewProvider('archflow.dashboard', new ArchFlowViewProvider()),
+  );
+  context.subscriptions.push(
     vscode.commands.registerCommand('archflow.openArchitectureMap', () => {
       currentPanel = openArchitectureMap(context, workspaceFolder);
     }),
@@ -292,5 +295,26 @@ function activate(context) {
 }
 
 function deactivate() {}
+
+class ArchFlowViewProvider {
+  resolveWebviewView(webviewView) {
+    webviewView.webview.options = { enableScripts: true };
+    webviewView.webview.html = `<!doctype html>
+      <html><body style="font-family:var(--vscode-font-family);padding:14px;color:var(--vscode-foreground)">
+        <h3 style="margin:0 0 8px">ArchFlow</h3>
+        <p style="opacity:.75;font-size:12px;line-height:1.5">Explore your workspace architecture, dependencies, health, and security insights.</p>
+        <button data-action="open" style="width:100%;margin:5px 0;padding:7px">Open Architecture Map</button>
+        <button data-action="workspace" style="width:100%;margin:5px 0;padding:7px">Analyze Current Workspace</button>
+        <script>
+          const api=acquireVsCodeApi();
+          document.querySelectorAll('[data-action]').forEach((button)=>button.addEventListener('click',()=>api.postMessage({action:button.dataset.action})));
+        </script>
+      </body></html>`;
+    webviewView.webview.onDidReceiveMessage((message) => {
+      if (message.action === 'open') vscode.commands.executeCommand('archflow.openArchitectureMap');
+      if (message.action === 'workspace') vscode.commands.executeCommand('archflow.analyzeWorkspace');
+    });
+  }
+}
 
 module.exports = { activate, deactivate, createWebviewContent, rewriteLocalAssets };

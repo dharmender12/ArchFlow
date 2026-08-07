@@ -2,7 +2,7 @@
   "name": "archflow-vscode",
   "displayName": "ArchFlow Architecture Explorer",
   "description": "Explore your codebase architecture inside VS Code.",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "publisher": "DharmenderThakur",
   "license": "MIT",
   "icon": "assets/archflow-marketplace.jpg",
@@ -28,6 +28,24 @@
   ],
   "main": "./extension/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "archflow",
+          "title": "ArchFlow",
+          "icon": "assets/archflow-marketplace.jpg"
+        }
+      ]
+    },
+    "views": {
+      "archflow": [
+        {
+          "type": "webview",
+          "id": "archflow.dashboard",
+          "name": "ArchFlow"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "archflow.openArchitectureMap",
